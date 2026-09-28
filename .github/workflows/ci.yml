@@ -3,8 +3,12 @@ name: 校验并生成源索引
 on:
   pull_request:
     branches: [ main ]
+    paths:
+      - 'rules/**'
   push:
     branches: [ main ]
+    paths:
+      - 'rules/**'
 
 permissions:
   contents: write
@@ -16,7 +20,7 @@ jobs:
       - name: 拉取仓库代码
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.head_ref }}
+          ref: ${{ github.head_ref || github.ref_name }}
 
       - name: 安装Node.js环境
         uses: actions/setup-node@v4
