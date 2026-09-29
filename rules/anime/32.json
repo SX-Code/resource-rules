@@ -4,8 +4,8 @@
   "category": "anime",
   "version": "1.0.0",
   "enabled": true,
-  "sourceType": "sniff",
-  "description": "嗅探源/画质清晰",
+  "type": "sniff",
+  "remark": "嗅探源/画质清晰",
   "website": "https://www.agedm.io",
   "apiUrl": "https://www.agedm.io/search?query={wd}",
   "apiMethod": "GET",
@@ -30,8 +30,8 @@
   "fieldMapping": {},
   "script": "if(window.__sniffBridgeInited!==true){function sniffResource(){var list=document.querySelectorAll('#cata_video_list .cata_video_item');if(!list||0==list.length){sendResourceList([]);return}const resourceList=[];for(const item of list){var aWrapper=item.querySelector('a.d-block');if(!aWrapper)continue;var url=aWrapper.href;var img=item.querySelector('img.video_thumbs');var title=aWrapper.getAttribute('title').trim();var descEl=item.querySelector('.video_detail_info.desc');var blurb='';if(descEl){blurb=descEl.textContent.replace('简介：','')}resourceList.push({id:getId(url),name:title,url:url,img:img.getAttribute('data-original'),blurb:blurb})}sendResourceList(resourceList)}function sniffEpisode(){var menuList=document.querySelectorAll('ul.nav-pills button.nav-link');var sourceList=document.querySelectorAll('div.tab-content div.tab-pane');if(!sourceList||0==sourceList.length){sendEpisodeList([]);return}var sourceMap={};for(var i=0;i<sourceList.length;i++){var episodeList=sourceList[i].getElementsByTagName('a');if(0==episodeList.length)continue;sourceMap[menuList[i].textContent.replace('VIP','')]=Array.from(episodeList).map(item=>({name:item.textContent,url:item.href}))}sendSourceMap(sourceMap)}async function sniffPlayUrl(){const iframe=document.querySelector('#iframeForVideo');if(iframe){sendLoadIframe(iframe.getAttribute('src'));return}const video=await waitForElement('video',10,200);if(!video){sniffLog('未找到video元素');sendPlayUrl('');return}const playUrl=video.getAttribute('src');sendPlayUrl(playUrl)}function waitForElement(selector,maxRetry=10,intervalMs=200){return new Promise((resolve)=>{let count=0;function poll(){const el=document.querySelector(selector);if(el){resolve(el);return}count++;if(count>=maxRetry){resolve(null);return}setTimeout(poll,intervalMs)}poll()})}function getId(uri){const url=new URL(uri);const path=url.pathname;const filename=path.split('/').pop();return filename}window.taskSniffResource=function(){sniffLog('开始执行任务：获取资源信息');sniffResource();sniffLog('任务执行完成：获取资源信息')};window.taskSniffEpisode=function(){sniffLog('开始执行任务：获取分集列表');sniffEpisode();sniffLog('任务执行完成：获取分集列表')};window.taskSniffPlayUrl=function(){sniffLog('开始执行任务：嗅探播放地址');sniffPlayUrl();sniffLog('任务执行完成：嗅探播放地址')};function sendToFlutter(msg){window.FlutterBridge&&window.FlutterBridge.postMessage(JSON.stringify(msg))}function sniffLog(text){sendToFlutter({msgType:'log',payload:String(text)})}function sendResourceList(list){sendToFlutter({msgType:'resourceList',payload:list})}function sendSourceMap(map){sendToFlutter({msgType:'sourceMap',payload:map})}function sendPlayUrl(url){sendToFlutter({msgType:'playUrl',payload:String(url)})}function sendLoadIframe(url){sendToFlutter({msgType:'loadIframe',payload:String(url)})}}else{'undefined'!==typeof sniffLog&&sniffLog('桥接脚本已存在，跳过重复注入')}",
   "proxyRequired": false,
-  "createdBy": "sxcode",
-  "createdAt": 1786177920,
+  "createdBy": "public",
+  "createdAt": 1790647710,
   "updatedBy": "",
-  "updatedAt": 1786177920
+  "updatedAt": 1790647710
 }

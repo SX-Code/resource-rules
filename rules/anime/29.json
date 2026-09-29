@@ -4,8 +4,8 @@
   "category": "anime",
   "version": "1.0.0",
   "enabled": true,
-  "sourceType": "sniff",
-  "description": "嗅探源/画质一般",
+  "type": "sniff",
+  "remark": "嗅探源/画质一般",
   "website": "https://www.bmmdmm.com",
   "apiUrl": "https://www.bmmdmm.com/s_all?ex=1&kw={wd}",
   "apiMethod": "GET",
@@ -30,8 +30,8 @@
   "fieldMapping": {},
   "script": "if(window.__sniffBridgeInited!==true){async function sniffResource(){var list=document.querySelectorAll('.lpic li');if(!list||0==list.length){sendResourceList([]);return}const resourceList=[];for(const item of list){var aTitle=item.querySelector('h2 a');if(!aTitle)continue;var url=aTitle.href;var img=item.querySelector('img');var p=item.querySelector('p');resourceList.push({id:getId(url),name:aTitle.innerText,url:url,img:img.getAttribute('src'),blurb:p.innerText})}sendResourceList(resourceList)}async function sniffEpisode(){const root=Array.from(document.querySelectorAll('.tabs')).find(el=>{return el.querySelector('.menu0 li')?.textContent.includes('播放Ⅰ')});if(!root){sendEpisodeList([]);return}var menuList=root.querySelectorAll('#menu0 li');var sourceList=root.querySelectorAll('#main0 .movurl');if(!sourceList||0==sourceList.length){sendEpisodeList([]);return}var sourceMap={};for(var i=0;i<sourceList.length;i++){var episodeList=sourceList[i].getElementsByTagName('a');if(0==episodeList.length)continue;sourceMap[menuList[i].innerText]=Array.from(episodeList).map(item=>({name:item.innerText,url:item.href}))}sendSourceMap(sourceMap)}async function sniffPlayUrl(){const iframe=document.getElementById('hm_playfram');if(!iframe){sendPlayUrl('');return}const srcUrl=iframe.getAttribute('src');if(0==srcUrl.length){sendPlayUrl('');return}const realM3u8=getQueryFromRelativeUrl(srcUrl,'url');if(0==srcUrl.length){sendPlayUrl('');return}sendPlayUrl(realM3u8)}function getId(uri){const url=new URL(uri);const path=url.pathname;const filename=path.split('/').pop();return filename.replace('.html','')}function getQueryFromRelativeUrl(href,paramKey){const idx=href.indexOf('?');if(-1===idx)return null;const searchStr=href.slice(idx+1);const params=new URLSearchParams(searchStr);return params.get(paramKey)}window.taskSniffResource=async function(){sniffLog('开始执行任务：获取资源信息');await sniffResource();sniffLog('任务执行完成：获取资源信息')};window.taskSniffEpisode=async function(){sniffLog('开始执行任务：获取分集列表');await sniffEpisode();sniffLog('任务执行完成：获取分集列表')};window.taskSniffPlayUrl=async function(){sniffLog('开始执行任务：嗅探播放地址');await sniffPlayUrl();sniffLog('任务执行完成：嗅探播放地址')};function sendToFlutter(msg){window.FlutterBridge&&window.FlutterBridge.postMessage(JSON.stringify(msg))}function sniffLog(text){sendToFlutter({msgType:'log',payload:String(text)})}function sendResourceList(list){sendToFlutter({msgType:'resourceList',payload:list})}function sendEpisodeList(list){sendToFlutter({msgType:'episodeList',payload:list})}function sendSourceMap(map){sendToFlutter({msgType:'sourceMap',payload:map})}function sendPlayUrl(url){sendToFlutter({msgType:'playUrl',payload:String(url)})}}else{'undefined'!==typeof sniffLog&&sniffLog('桥接脚本已存在，跳过重复注入')}",
   "proxyRequired": false,
-  "createdBy": "sxcode",
-  "createdAt": 1786177920,
+  "createdBy": "public",
+  "createdAt": 1790647710,
   "updatedBy": "",
-  "updatedAt": 1786177920
+  "updatedAt": 1790647710
 }

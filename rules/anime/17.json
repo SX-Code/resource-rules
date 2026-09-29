@@ -4,8 +4,8 @@
   "category": "anime",
   "version": "1.0.0",
   "enabled": true,
-  "sourceType": "m3u8",
-  "description": "切片源",
+  "type": "m3u8",
+  "remark": "切片源",
   "website": "https://iqiyizyapi.com",
   "apiUrl": "https://iqiyizyapi.com/api.php/provide/vod/?ac={ac}&t={t}&pg={pg}&wd={wd}&h={h}&ids={ids}",
   "apiMethod": "GET",
@@ -49,8 +49,8 @@
     "vod_douban_score": "resource.douban_score"
   },
   "proxyRequired": false,
-  "createdBy": "system",
-  "createdAt": 1786177920,
+  "createdBy": "public",
+  "createdAt": 1790647710,
   "updatedBy": "",
-  "updatedAt": 1786177920
+  "updatedAt": 1790647710
 }
