@@ -10,7 +10,7 @@
   "apiUrl": "https://dmbus.cc/s----------.html?wd={wd}",
   "apiMethod": "GET",
   "searchable": true,
-  "timeout": 2000,
+  "timeout": 10000,
   "maxRetry": 3,
   "requestHeader": {
     "accept": "*/*",

@@ -10,7 +10,7 @@
   "apiUrl": "https://www.dmwo.one/vodsearch/-------------.html?wd={wd}&submit=",
   "apiMethod": "GET",
   "searchable": true,
-  "timeout": 2000,
+  "timeout": 20000,
   "maxRetry": 3,
   "requestHeader": {
     "accept": "*/*",

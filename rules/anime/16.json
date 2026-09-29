@@ -10,7 +10,7 @@
   "apiUrl": "https://api.maoyanapi.top/api.php/provide/vod?ac={ac}&t={t}&pg={pg}&wd={wd}&h={h}&ids={ids}",
   "apiMethod": "GET",
   "searchable": false,
-  "timeout": 2000,
+  "timeout": 10000,
   "maxRetry": 3,
   "requestHeader": {},
   "apiContentType": "application/x-www-form-urlencoded",

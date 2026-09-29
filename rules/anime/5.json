@@ -10,7 +10,7 @@
   "apiUrl": "https://www.hongniuzy3.com/api.php/provide/vod/from/hnm3u8/at/json/?ac={ac}&t={t}&pg={pg}&wd={wd}&h={h}&ids={ids}",
   "apiMethod": "GET",
   "searchable": true,
-  "timeout": 2000,
+  "timeout": 10000,
   "maxRetry": 3,
   "requestHeader": {},
   "apiContentType": "application/x-www-form-urlencoded",
