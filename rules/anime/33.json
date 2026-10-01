@@ -12,12 +12,11 @@
   "searchable": true,
   "timeout": 10000,
   "maxRetry": 3,
-  "requestHeader": {
+  "requestHeaders": {
     "accept": "*/*",
-    "origin": "https://www.moonci.com",
     "pragma": "no-cache",
-    "referer": "https://www.moonci.com",
     "priority": "u=1, i",
+    "X-Playback-Session-Id": "62443A7C-8F6A-4AF0-93F9-C56252C9E65D",
     "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:129.0) Gecko/20100101 Firefox/129.0",
     "cache-control": "no-cache",
     "sec-fetch-dest": "empty",

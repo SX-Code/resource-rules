@@ -12,7 +12,7 @@
   "searchable": true,
   "timeout": 10000,
   "maxRetry": 3,
-  "requestHeader": {
+  "requestHeaders": {
     "accept": "*/*",
     "origin": "",
     "pragma": "no-cache",

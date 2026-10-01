@@ -12,7 +12,7 @@
   "searchable": true,
   "timeout": 10000,
   "maxRetry": 3,
-  "requestHeader": {},
+  "requestHeaders": {},
   "apiContentType": "application/x-www-form-urlencoded",
   "typeMapping": { "29": 1, "30": 2, "31": 3, "42": 4, "43": 5 },
   "fieldMapping": {

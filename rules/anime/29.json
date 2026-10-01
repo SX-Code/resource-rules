@@ -12,12 +12,13 @@
   "searchable": true,
   "timeout": 10000,
   "maxRetry": 3,
-  "requestHeader": {
+  "requestHeaders": {
     "accept": "*/*",
     "origin": "https://www.bmmdmm.com",
     "pragma": "no-cache",
     "referer": "https://www.bmmdmm.com",
     "priority": "u=1, i",
+    "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Microsoft Edge\";v=\"146\"",
     "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:129.0) Gecko/20100101 Firefox/129.0",
     "cache-control": "no-cache",
     "sec-fetch-dest": "empty",

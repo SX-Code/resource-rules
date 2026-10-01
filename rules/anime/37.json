@@ -10,9 +10,9 @@
   "apiUrl": "https://www.akianime.cc/bgmsearch/-------------.html?wd={wd}",
   "apiMethod": "GET",
   "searchable": true,
-  "timeout": 10000,
+  "timeout": 30000,
   "maxRetry": 3,
-  "requestHeader": {
+  "requestHeaders": {
     "accept": "*/*",
     "origin": "https://www.akianime.cc",
     "pragma": "no-cache",
