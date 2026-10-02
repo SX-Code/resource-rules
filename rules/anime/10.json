@@ -15,6 +15,7 @@
   "requestHeaders": {},
   "apiContentType": "application/x-www-form-urlencoded",
   "typeMapping": { "38": 1, "39": 2, "40": 3 },
+  "responseField": "list",
   "fieldMapping": {
     "vod_en": "resource.name_en",
     "vod_id": "resource_source.from_id",
