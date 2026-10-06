@@ -2,7 +2,7 @@
   "id": 31,
   "name": "七色番",
   "category": "anime",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "enabled": true,
   "type": "sniff",
   "remark": "嗅探源/画质清晰",
@@ -14,9 +14,7 @@
   "maxRetry": 3,
   "requestHeaders": {
     "accept": "*/*",
-    "origin": "https://7sefun.top",
     "pragma": "no-cache",
-    "referer": "https://7sefun.top",
     "priority": "u=1, i",
     "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Microsoft Edge\";v=\"146\"",
     "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:129.0) Gecko/20100101 Firefox/129.0",
