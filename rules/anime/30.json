@@ -14,9 +14,7 @@
   "maxRetry": 3,
   "requestHeaders": {
     "accept": "*/*",
-    "origin": "https://dmbus.cc",
     "pragma": "no-cache",
-    "referer": "https://dmbus.cc",
     "priority": "u=1, i",
     "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:129.0) Gecko/20100101 Firefox/129.0",
     "cache-control": "no-cache",
