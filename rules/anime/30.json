@@ -2,7 +2,7 @@
   "id": 30,
   "name": "动漫巴士",
   "category": "anime",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "enabled": true,
   "type": "sniff",
   "remark": "嗅探源/画质清晰",
