@@ -1,0 +1,2 @@
+scripts/sandbox-qjs/scripts/*
+!scripts/sandbox-qjs/scripts/bmddm.js
