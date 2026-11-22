@@ -81,6 +81,13 @@ globalThis.__COMMON__ = {
   },
 };
 
+globalThis.window = {
+  FlutterBridge: {
+    postMessage: function (msg) {
+      console.log(msg)
+    }
+  }
+}
 
 /**
  * 模拟 Flutter 打印
@@ -299,7 +306,7 @@ function minifyJs(code) {
     const res = Terser.minify_sync(code, {
       mangle: false,
       compress: false,
-      format: { comments: false },
+      format: { comments: false, quote_style: 3, },
     });
     if (res.error) {
       return JSON.stringify({ ok: false, error: String(res.error.message || res.error) });

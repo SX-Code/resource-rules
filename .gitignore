@@ -1,2 +1,7 @@
 scripts/sandbox-qjs/scripts/*
 !scripts/sandbox-qjs/scripts/bmddm.js
+
+scripts/sandbox-qjs/test_custom.js
+scripts/sandbox-qjs/test_script.js
+
+*.ori.json
